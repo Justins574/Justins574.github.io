@@ -1,0 +1,241 @@
+<html>
+
+<head>
+
+<title>Recursive Descent Recognizer</title>
+
+</head>
+
+<body style="background-color:FEC59C;>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+ 
+
+body {
+  font-family: CalibriArial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  border-radius: 25px;
+  padding: 5px;	
+  text-align: center;
+  background: rgba(46, 45, 43, 0.8);
+  color: white;
+  margin: 35px 235px;
+}
+
+/* Style the header2 */
+.header2 {
+  border-radius: 25px;
+  background: rgba(240, 247, 252, 0.8);
+  margin: 35px 235px;
+  padding: 20px;
+}
+
+/* Style the header3 */
+.header3 {
+  padding: 20px;
+  font-size: 20px;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+body {
+
+}
+
+</style>
+
+
+<div class="header">
+
+  <center><h1>Recursive Descent Recognizer</h1></center>
+</div>
+
+
+<div class="header2">
+
+Enter an expression using the numbers 0, 1, 2, or 3, as well the following symbols +, -, *, /, (, or ).<br>
+The input string should be punctuated with a dollar sign, '$'.<br>
+When the "submit" button is clicked, the input string will be to check to see if is valid for the grammar below.<br><br>
+
+EXP		::= EXP  + TERM   | EXP - TERM    | TERM	<br>
+TERM	::= TERM * FACTOR | TERM / FACTOR | FACTOR	<br>
+FACTOR	::= ( EXP ) | DIGIT	<br>
+DIGIT	::= 0 | 1 | 2 | 3	<br><br>
+
+Valid Strings:<br>
+1+2$ <br>
+0-3*2$<br>
+2/(3+1)$<br>
+1+2*3+0$<br>
+3*2/(1+2)$<br>
+0-(1)$<br>
+(((3+0)*2-(1/3))+2)$<br><br>
+
+Invalid Strings:<br> 
+1+2<br>
+1*4$ <br>
+1*a$<br>
+3/10$<br>
+3+2$$<br>
+(0-2))$<br>
+2$1<br><br>
+
+Enter a Valid String: 
+<input type="text" id="input">
+<button onClick ="CheckString()"> Submit </button> <br>
+
+   
+
+<script>
+
+
+function CheckString() {
+	
+
+	var input = document.getElementById("input").value;
+	
+	var count = 0;
+	var token = input[count];
+	var valid = 1;
+	
+	console.log("current token: " + token); 
+	Start();
+	
+	if (valid == 1){
+		document.getElementById("output").innerHTML = input + " is a valid string.";
+	} else {
+		document.getElementById("output").innerHTML = input + " is not a valid string.";
+	}
+
+	function Start(){
+		Exp();
+		if (token != '$'){
+			Error();
+		}
+		count++;
+		if (count != input.length){
+			Error();
+		}	
+	}
+
+	function Exp(){
+		if (token == '(' || token == '0' || token == '1' || token == '2' || token == '3' ){
+			Term();
+		} else {
+			Error();
+		}
+		
+		while (token == '+' || token == '-'){
+			Lex();
+			if (token == '(' || token == '0' || token == '1' || token == '2' || token == '3' ){
+				Term();
+			} else {
+				Error();
+			}
+		}
+	}
+
+	function Term(){
+		if (token == '(' || token == '0' || token == '1' || token == '2' || token == '3' ){
+			Factor();
+		} else {
+			Error();
+		}
+		
+		while (token == '*' || token == '/'){
+			Lex();
+			if (token == '(' || token == '0' || token == '1' || token == '2' || token == '3' ){
+				Factor();
+			} else {
+				Error();
+			}
+		}
+	}
+
+	function Factor(){
+		if (token == '('){
+			Lex();
+			Exp();
+			if (token == ')'){
+				Lex();
+			} else {
+				Error();
+			}
+		} else if ( token == '0' || token == '1' || token == '2' || token == '3' ){
+			Digit();
+		} else {
+			Error();
+		}
+		
+	}
+
+	function Digit(){
+		if ( token == '0' || token == '1' || token == '2' || token == '3' ){
+			Lex();
+		} else {
+			Error();
+		}
+	}
+	
+	function Lex(){
+		count++;
+		token = input[count];
+		console.log("current token: " + token); 
+	}
+	
+	function Error(){
+		valid = 0;
+	}
+
+}
+
+</script>
+
+<p id="output"></p>
+
+<br>
+
+For my RDR implementation, the language I used was JavaScript. I personally enjoyed this experience; 
+JavaScript was definitely a language that I was looking forward to practicing. 
+Prior to this assignment, I had never used JavaScript. 
+In fact, prior to our PL1 assignment, I had never done any meaningful work with HTML. 
+JavaScript personally was not hard to implement, at least for this assignment. 
+Following my pseudocode from PL1, I had very little trouble writing the code. 
+For the most part, everything in JavaScript worked exactly how I would have expected it to work in Java.
+<br><br>
+Most of what I needed help with was found in 
+<b><a href ="https://www.w3schools.com/jsref/dom_obj_text.asp">w3schools.com</a></b> and
+<b><a href="https://www.youtube.com/watch?v=8dEh-iUbu3E">YouTube</a></b>, such as when storing input from a textbox into a variable.
+Page 228 of the first reference book within the syllabus 
+(Kenneth C. Louden, "Programming Languages: Principles and Practice", 2nd edition) 
+provided a very nice example of a recursive descent parser to follow.
+<br><br>	
+As for suggestions, the best advice I can give is for fellow students to just google a lot, 
+and to play with the editors on w3schools.com to get a quick and immediate feel of how the example code looks in execution.
+<br><br>	
+A very useful line of code for me was "console.log()", which could be used to print the value of a variable onto the console.
+Pressing the F12 key and clicking on the "Console" tab allowed to track the current token.
+
+
+ 
+</div>
+
+<div class="header">
+
+  <center><h1><b><a href="index.html">Back to Home</a></b></h1></center>
+</div>
+
+
+</body>
+
+</html>
