@@ -1,234 +1,75 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
-<title>Justin Kaloti's Webpage</title>
+	<title>Justin Kaloti</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+
+	<!--Bootstrap links-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- CSS Files-->
+	<link rel="stylesheet" href="./styles/index.css" />
 
 </head>
 
-<body style="background-color:FEC59C;>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<body class>
 
-<style>
- 
+<!-- Navigation bar-->
+<nav class="navbar navbar-expand-sm navbar-col navbar-dark">
+	<ul class="navbar-nav">
+	  <li class="nav-item active">
+		<a class="nav-link" href="#">Active</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="#">Link</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="#">Link</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link disabled" href="#">Disabled</a>
+	  </li>
+	</ul>
+  </nav>
 
-body {
-  font-family: CalibriArial, Helvetica, sans-serif;
-  margin: 0;
-}
+<!-- Container for Margins-->
+<div class="container p-3 my-3">
 
-/* Style the header */
-.header {
-  font-family: Cursive, Impact, Charcoal, sans-serif;
-  padding: 5px;
-  text-align: center;
-  background: rgba(96, 105, 113, 0.8);
-  color: white;
-  margin: 35px 235px;
-}
-
-/* Style the header2 */
-.header2 {
-  background: rgba(240, 247, 252, 0.8);
-  margin: 35px 235px;
-  padding: 20px;
-}
-
-/* Style the header3 */
-.header3 {
-  padding: 20px;
-  font-size: 20px;
-}
-
-/* Style the header4 */
-.header4 {
-  background: rgba(240, 247, 252, 0.8);
-  margin: 35px 35px;
-  padding: 20px;
-}
-
-/* Increase the font size of the h1 element */
-.header h1 {
-  font-size: 40px;
-}
-
-body {
-  background-image: url('sunset.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-</style>
-
-<body>
-
-
-<div class="header">
-
-  <center><h1>Justin Kaloti's CSC 135 Home Page</h1></center>
-</div>
-
-
-<div class="header2">
-
-<h2>Self Introduction:</h2>
-
-<p>
-Hello, my name is Justin Kaloti. I can be contacted with the following email address: jkaloti@csus.edu 
-<br>I am a computer science major attending California State University, Sacramento. This is my third semester classes here. 
-I am not sure as of right now what my career goal is, but I would imagine that I would end up doing something related to computer science.
-My passions include listening to and producing music, watching and playing basketball (poorly), 
-browsing YouTube, and spending time with people who want to spend time with me.
-</p>
-
-<center><img src="records.jpg" alt="W3Schools.com" width="450" height="300"></center/>
-
-<h2>Programming Experience:</h2>
-
-<p>I am most proficient with C++ on Visual Studio and Java on jGrasp, Eclipse, and Android Studio. 
-I have some experience with x86 assembly language and C, and web experience with HTML and javascript.
-<br>I would like to expand my skills with C++ and Java, as well as learn some C# through Unity. 
-Learning some more python would be nice too when I can get around to it.
-<br>
-<br>
-<br>
-<br>
-
-</p>
-
-<h2>PL Assignment 1 Definitions:</h2>	
-
-	<div class="header3">
-	
-	<p2> <b><a href="https://www.techopedia.com/definition/3959/syntax">Syntax:</a></b> 
-	The rules that specify the correct combined sequence of symbols that can be used to form a 
-	correctly structured program using a given programming language.
-	
-	
-	<br><br> <b><a href="https://www.techopedia.com/definition/687/semantics-computing">Semantics:</a></b> 
-	The linguistic representations or symbols support logical outcomes, 
-	as a set of words and phrases signify ideas to both humans and machines.
-	
-	<br><br> <b><a href="https://www.tutorialspoint.com/compiler_design/compiler_design_lexical_analysis.htm">Lexical Scanning:</a></b> 
-	The first phase of a compiler. It takes the modified source code from language preprocessors 
-	that are written in the form of sentences. The lexical analyzer breaks these syntaxes into a series of tokens, 
-	by removing any whitespace or comments in the source code.
-	
-	<br><br> <b><a href="https://www.techopedia.com/definition/3853/parse">Parsing:</a></b> 
-	To parse, in computer science, is where a string of commands – usually a program – is separated into more easily processed components, 
-	which are analyzed for correct syntax and then attached to tags that define each component.
-	
-	<br><br> <b><a href="https://www.techopedia.com/definition/3854/parser">Parser:</a></b> 
-	A compiler or interpreter component that breaks data into smaller elements for easy translation into another language. 
-	It takes input in the form of a sequence of tokens or program instructions and usually builds a data structure in the 
-	form of a parse tree or an abstract syntax tree.
-	
-	
-	
-	</p2>
+	<div class="container p-3 my-3 text-black border primary">
+		<center><h1>Justin Kaloti</h1></center>
 	</div>
-	
-<h2>PL Assignment 3 Question 6:</h2>	
 
-	<div class="header4">
-	
-	<p3> <b>PROLOG</b> <br><br>
-	
-	<center> 
-	A) FACTS<br><br>
-	
-	played_for(james, guard, lakers).<br>
-	/*Lebron James has played as a guard for the Lakers (2020)*/<br><br>
+	<div class="">
 
-	played_for(james, forward, cavaliers).<br>
-	/*Lebron James has played as a foward for the Cavaliers (2018)*/<br><br>
+		<h2>About Me:</h2>
 
-	played_for(davis, forward, lakers).<br>
-	/*Anthony Davis has played as a foward for the Lakers (2020)*/<br><br>
-
-	played_for(davis, center, pelicans).<br>
-	/*Anthony Davis has played as a center for the Pelicans (2019)*/<br><br>
-
-	played_for(leonard, forward, clippers).<br>
-	/*Kawhi Leonard has played as a foward for the Clippers (2020)*/<br><br>
-
-	played_for(curry, guard, warriors).	<br>
-	/*Stephen Curry has played as a guard for the Warriors (2020)*/<br><br>
-
-	played_for(durant, forward, warriors).<br>
-	/*Kevin Durant has played as a forward for the Warriors (2019)*/<br><br>
-
-	played_for(harden, guard, rockets).<br>	
-	/*James Harden has played as a guard for the Rockets (2020)*/<br><br>
+		<p>
+		Hello, my name is Justin Kaloti. I can be contacted with the following email address: jkaloti@csus.edu 
+		<br>I am a computer science major attending California State University, Sacramento. This is my third semester classes here. 
+		I am not sure as of right now what my career goal is, but I would imagine that I would end up doing something related to computer science.
+		My passions include listening to and producing music, watching and playing basketball (poorly), 
+		browsing YouTube, and spending time with people who want to spend time with me.
+		</p>
 
 
-	total_rings(james, three).	<br>	
-	/*Lebron James has obtained three rings*/<br><br>
+		<h2>Programming Experience:</h2>
 
-	total_rings(curry, three).	<br>
-	/*Stephen Curry has obtained three rings*/<br><br>
+		<p>I am most proficient with C++ on Visual Studio and Java on jGrasp, Eclipse, and Android Studio. 
+		I have some experience with x86 assembly language and C, and web experience with HTML and javascript.
+		<br>I would like to expand my skills with C++ and Java, as well as learn some C# through Unity. 
+		Learning some more python would be nice too when I can get around to it.
 
-	total_rings(leonard, two).	<br>		
-	/*Kawhi Leonard has obtained two rings*/<br><br>
 
-	total_rings(durant, two).	<br>
-	/*Kevin Durant has obtained two (questionable) rings*/<br><br>
-	
-	
-	<br>B) RULES<br><br> 
-	
-	played_for_la(X) :- played_for(X, _, lakers); played_for(X, _, clippers).<br>
-	/*X has played for a Los Angeles team if X has played for the Lakers or for the Clippers*/<br><br>
 
-	frontcourt(X) :- played_for(X, forward, _); played_for(X, center, _).<br>
-	/*X has played as a frontcourt player if X has played as a forward or center*/<br><br>
-
-	backcourt(X) :- played_for(X, guard, _).<br>
-	/*X has played as a backcourt player if X has played as a guard*/<br><br>
-		
-	
-	<br>C) GOALS<br><br> 
-	
-	/*Query 1 Who has played as a backcourt player and has played for the Warriors?*/<br>
-	?- backcourt(X), played_for(X, _, warriors).<br><br>
-
-	/*Query 2 Who has played as a frontcourt player, has won three rings, and has played for a Los Angeles team?*/<br>
-	?- frontcourt(X), total_rings(X, three), played_for_la(X).<br><br>
-	
-	
-	<br>D) SOLUTIONS<br><br> 
-	
-	<img src="PartD.png"><br>
-	
-	
-	<br>E) DEDUCTION TREE FOR QUERY 1<br><br> 
-	
-	<img src="PartE.png"><br>
-	
-	
-	</center>
-	</p3>
 	</div>
-	
-	<h2>PL Assignment 4:</h2>
-	
-	<h1><center><b><a href="rdr.html">Recursive Descent Recognizer</a></b></center><h1>
-	
-	<br>
- 
-</div>
 
-<br><br>
+</div>
 
 </body>
-
 </html>
