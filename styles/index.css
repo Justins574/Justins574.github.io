@@ -1,9 +1,18 @@
-.primary{
+.navbar-col{
     background-color: #3D9970;
 }
 
-.navbar-col{
-    background-color: #3D9970;
+.primary{
+    background-color: #a2f2cf;
+}
+
+.secondary{
+    background-color: #e3fff2;
+}
+
+.img-reduce{
+    width: 100px;
+    height: auto;
 }
 
 .old{background-color: #fec59c;}
