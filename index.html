@@ -21,25 +21,26 @@
 <body class>
 
 <!-- Navigation bar-->
-<nav class="navbar navbar-expand-sm navbar-col navbar-dark">
+<nav class="navbar navbar-expand-sm navbar-col navbar-dark fixed-top">
 	<ul class="navbar-nav">
-	  <li class="nav-item active">
-		<a class="nav-link" href="#">Active</a>
+	  <li class="nav-item">
+		<a class="nav-link" href="#">Top</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="#prog">Prog</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="#about">About</a>
 	  </li>
 	  <li class="nav-item">
 		<a class="nav-link" href="#">Link</a>
-	  </li>
-	  <li class="nav-item">
-		<a class="nav-link" href="#">Link</a>
-	  </li>
-	  <li class="nav-item">
-		<a class="nav-link disabled" href="#">Disabled</a>
 	  </li>
 	</ul>
   </nav>
 
+
 <!-- Container for Margins-->
-<div class="container p-3 my-3">
+<div class="container" style="margin-top:80px">
 
 	<!-- Title Bar -->
 	<div class="container p-3 my-3 border primary rounded">
@@ -51,13 +52,13 @@
 
 		<div class="row">
 
-			<div class="col-sm-3">
+			<div class="col-sm-3 p-3 my-3 ">	
 				<div class="container">     
 					<img src="Me.jpg"  alt="Myself" class="img-fluid img-thumbnail rounded-circle"> 
 				</div>
 			</div>
 
-			<div class="col-sm-6 primary">
+			<div class="col-sm-6 p-3 my-3 primary rounded">
 				<h2>Welcome to my webpage!</h2>
 				In May 2021, I graduated from CSU Sacramento, with my Bachelor's degree in Computer Science.<br>
 				I designed this webpage from the ground up using HTML, CSS, and Bootstrap 4.
@@ -65,12 +66,14 @@
 				<a href="https://www.w3schools.com/bootstrap4/default.asp">W3Schools</a> 
 				was instrumental in helping me create this website. 
 				If you are interested in learning some of the cool features on my webpage, I highly recommend checking out their 
-				Boostrap 4 tutorial.
+				Boostrap 4 tutorial, as well as the official 
+				<a href="https://getbootstrap.com/docs/4.0/getting-started/introduction">Bootstrap Website</a> for documentation,
+				examples, and more.
 				<br><br>
 
 			</div>	
 			
-			<div class="col-sm-3">	
+			<div class="col-sm-3 p-3 my-3 ">	
 				
 				<!-- Vertical button group with links -->
 				<center>
@@ -85,7 +88,8 @@
 
 	</div>
 
-	<div class="container p-3 my-3 border primary rounded">
+	<a> <h1 style="padding-top: 40px; margin-top: -40px;" id="prog"></h1> </a>
+	<div class="container p-3 my-3 border primary rounded" >
 		
 		<h2>Programming Experience:</h2>
 		
@@ -96,6 +100,8 @@
 
 	</div>
 
+
+	<a> <h1 style="padding-top: 40px; margin-top: -40px;" id="about"></h1> </a>
 	<div class="container p-3 my-3 border secondary rounded">
 
 		<h2>About Me:</h2>
@@ -110,6 +116,17 @@
 
 	</div>
 
+</div>
+
+<div class="jumbotron">
+</div>
+<div class="jumbotron">
+</div>
+<div class="jumbotron">
+</div>
+<div class="jumbotron">
+</div>
+<div class="jumbotron">
 </div>
 
 </body>
